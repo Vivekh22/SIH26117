@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CheckCircle2, ShieldOff, AlertTriangle, ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { Panel, PageHeader, StatusPill } from "@/components/primitives";
 import { useAppStore } from "@/lib/app-store";
 import { cn } from "@/lib/utils";
@@ -87,7 +87,7 @@ function AuditPage() {
           </thead>
           <tbody className="divide-y divide-border">
             {rows.map((l) => (
-              <>
+              <Fragment key={l.id}>
                 <tr
                   key={l.id}
                   onClick={() => setOpen(open === l.id ? null : l.id)}
@@ -169,7 +169,7 @@ function AuditPage() {
                     </td>
                   </tr>
                 )}
-              </>
+              </Fragment>
             ))}
           </tbody>
         </table>

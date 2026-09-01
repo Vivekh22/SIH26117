@@ -10,33 +10,167 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AgentsRouteImport } from './routes/agents'
+import { Route as AuditLogsRouteImport } from './routes/audit-logs'
+import { Route as DocumentsRouteImport } from './routes/documents'
+import { Route as HelpRouteImport } from './routes/help'
+import { Route as KnowledgeBaseRouteImport } from './routes/knowledge-base'
+import { Route as ModelRouterRouteImport } from './routes/model-router'
+import { Route as SecurityRouteImport } from './routes/security'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as ToolsRouteImport } from './routes/tools'
+import { Route as WorkbenchRouteImport } from './routes/workbench'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AgentsRoute = AgentsRouteImport.update({
+  id: '/agents',
+  path: '/agents',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuditLogsRoute = AuditLogsRouteImport.update({
+  id: '/audit-logs',
+  path: '/audit-logs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DocumentsRoute = DocumentsRouteImport.update({
+  id: '/documents',
+  path: '/documents',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HelpRoute = HelpRouteImport.update({
+  id: '/help',
+  path: '/help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KnowledgeBaseRoute = KnowledgeBaseRouteImport.update({
+  id: '/knowledge-base',
+  path: '/knowledge-base',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ModelRouterRoute = ModelRouterRouteImport.update({
+  id: '/model-router',
+  path: '/model-router',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SecurityRoute = SecurityRouteImport.update({
+  id: '/security',
+  path: '/security',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsRoute = ToolsRouteImport.update({
+  id: '/tools',
+  path: '/tools',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkbenchRoute = WorkbenchRouteImport.update({
+  id: '/workbench',
+  path: '/workbench',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/agents': typeof AgentsRoute
+  '/audit-logs': typeof AuditLogsRoute
+  '/documents': typeof DocumentsRoute
+  '/help': typeof HelpRoute
+  '/knowledge-base': typeof KnowledgeBaseRoute
+  '/model-router': typeof ModelRouterRoute
+  '/security': typeof SecurityRoute
+  '/settings': typeof SettingsRoute
+  '/tools': typeof ToolsRoute
+  '/workbench': typeof WorkbenchRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/agents': typeof AgentsRoute
+  '/audit-logs': typeof AuditLogsRoute
+  '/documents': typeof DocumentsRoute
+  '/help': typeof HelpRoute
+  '/knowledge-base': typeof KnowledgeBaseRoute
+  '/model-router': typeof ModelRouterRoute
+  '/security': typeof SecurityRoute
+  '/settings': typeof SettingsRoute
+  '/tools': typeof ToolsRoute
+  '/workbench': typeof WorkbenchRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/agents': typeof AgentsRoute
+  '/audit-logs': typeof AuditLogsRoute
+  '/documents': typeof DocumentsRoute
+  '/help': typeof HelpRoute
+  '/knowledge-base': typeof KnowledgeBaseRoute
+  '/model-router': typeof ModelRouterRoute
+  '/security': typeof SecurityRoute
+  '/settings': typeof SettingsRoute
+  '/tools': typeof ToolsRoute
+  '/workbench': typeof WorkbenchRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/agents'
+    | '/audit-logs'
+    | '/documents'
+    | '/help'
+    | '/knowledge-base'
+    | '/model-router'
+    | '/security'
+    | '/settings'
+    | '/tools'
+    | '/workbench'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/agents'
+    | '/audit-logs'
+    | '/documents'
+    | '/help'
+    | '/knowledge-base'
+    | '/model-router'
+    | '/security'
+    | '/settings'
+    | '/tools'
+    | '/workbench'
+  id:
+    | '__root__'
+    | '/'
+    | '/agents'
+    | '/audit-logs'
+    | '/documents'
+    | '/help'
+    | '/knowledge-base'
+    | '/model-router'
+    | '/security'
+    | '/settings'
+    | '/tools'
+    | '/workbench'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AgentsRoute: typeof AgentsRoute
+  AuditLogsRoute: typeof AuditLogsRoute
+  DocumentsRoute: typeof DocumentsRoute
+  HelpRoute: typeof HelpRoute
+  KnowledgeBaseRoute: typeof KnowledgeBaseRoute
+  ModelRouterRoute: typeof ModelRouterRoute
+  SecurityRoute: typeof SecurityRoute
+  SettingsRoute: typeof SettingsRoute
+  ToolsRoute: typeof ToolsRoute
+  WorkbenchRoute: typeof WorkbenchRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +182,91 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/agents': {
+      id: '/agents'
+      path: '/agents'
+      fullPath: '/agents'
+      preLoaderRoute: typeof AgentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/audit-logs': {
+      id: '/audit-logs'
+      path: '/audit-logs'
+      fullPath: '/audit-logs'
+      preLoaderRoute: typeof AuditLogsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/documents': {
+      id: '/documents'
+      path: '/documents'
+      fullPath: '/documents'
+      preLoaderRoute: typeof DocumentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/help': {
+      id: '/help'
+      path: '/help'
+      fullPath: '/help'
+      preLoaderRoute: typeof HelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/knowledge-base': {
+      id: '/knowledge-base'
+      path: '/knowledge-base'
+      fullPath: '/knowledge-base'
+      preLoaderRoute: typeof KnowledgeBaseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/model-router': {
+      id: '/model-router'
+      path: '/model-router'
+      fullPath: '/model-router'
+      preLoaderRoute: typeof ModelRouterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/security': {
+      id: '/security'
+      path: '/security'
+      fullPath: '/security'
+      preLoaderRoute: typeof SecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools': {
+      id: '/tools'
+      path: '/tools'
+      fullPath: '/tools'
+      preLoaderRoute: typeof ToolsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/workbench': {
+      id: '/workbench'
+      path: '/workbench'
+      fullPath: '/workbench'
+      preLoaderRoute: typeof WorkbenchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AgentsRoute: AgentsRoute,
+  AuditLogsRoute: AuditLogsRoute,
+  DocumentsRoute: DocumentsRoute,
+  HelpRoute: HelpRoute,
+  KnowledgeBaseRoute: KnowledgeBaseRoute,
+  ModelRouterRoute: ModelRouterRoute,
+  SecurityRoute: SecurityRoute,
+  SettingsRoute: SettingsRoute,
+  ToolsRoute: ToolsRoute,
+  WorkbenchRoute: WorkbenchRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

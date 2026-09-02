@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createFileRoute } from "@tanstack/react-router";
 import { Upload, Lock, Loader2, CheckCircle2, ScanLine } from "lucide-react";
 import { useRef, useState } from "react";
@@ -139,9 +140,7 @@ function DocumentsPage() {
                   <td className="px-4 py-3 text-[12px] text-muted-foreground">
                     {d.indexed ? "Yes" : "—"}
                   </td>
-                  <td className="px-4 py-3 text-[12px] text-muted-foreground">
-                    {d.uploadedAt}
-                  </td>
+                  <td className="px-4 py-3 text-[12px] text-muted-foreground">{d.uploadedAt}</td>
                 </tr>
               );
             })}

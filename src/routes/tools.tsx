@@ -25,8 +25,7 @@ export const Route = createFileRoute("/tools")({
       { title: "Tools & Sandbox — teamMESSIER-87 AI Workbench" },
       {
         name: "description",
-        content:
-          "Isolated on-premise tool execution with network access permanently blocked.",
+        content: "Isolated on-premise tool execution with network access permanently blocked.",
       },
       { property: "og:title", content: "Secure Tool Execution" },
       {
@@ -102,9 +101,7 @@ function ToolsPage() {
                   <StatusPill>Available</StatusPill>
                 </div>
                 <div className="mt-3 text-sm font-semibold">{t.name}</div>
-                <p className="mt-1 flex-1 text-[12px] text-muted-foreground">
-                  {t.description}
-                </p>
+                <p className="mt-1 flex-1 text-[12px] text-muted-foreground">{t.description}</p>
                 <div className="mt-3 flex items-center justify-between border-t border-border pt-3">
                   <StatusPill tone="danger">
                     <ShieldOff className="h-3 w-3" /> Network: BLOCKED

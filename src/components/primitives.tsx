@@ -4,16 +4,8 @@ import { ArrowRight } from "lucide-react";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-export function Panel({
-  className,
-  children,
-}: {
-  className?: string;
-  children: ReactNode;
-}) {
-  return (
-    <div className={cn("rounded-xl border border-border bg-card", className)}>{children}</div>
-  );
+export function Panel({ className, children }: { className?: string; children: ReactNode }) {
+  return <div className={cn("rounded-xl border border-border bg-card", className)}>{children}</div>;
 }
 
 export function PanelHeader({
@@ -58,9 +50,7 @@ export function StatCard({
         <Icon className="h-5 w-5" />
       </span>
       <div className="min-w-0">
-        <div className={cn("truncate text-xl font-bold tracking-tight", valueClass)}>
-          {value}
-        </div>
+        <div className={cn("truncate text-xl font-bold tracking-tight", valueClass)}>{value}</div>
         <div className="text-xs font-medium text-foreground/80">{label}</div>
       </div>
     </Panel>

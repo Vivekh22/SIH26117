@@ -69,8 +69,8 @@ function HelpPage() {
         <PanelHeader title="Support" />
         <div className="px-4 py-4 text-[12px] text-muted-foreground">
           On-site support: contact the plant IT desk. Incident reference prefix{" "}
-          <span className="font-mono text-foreground">SIH26117</span>. Remote assistance is
-          disabled by policy in air-gapped mode.
+          <span className="font-mono text-foreground">SIH26117</span>. Remote assistance is disabled
+          by policy in air-gapped mode.
         </div>
       </Panel>
     </div>

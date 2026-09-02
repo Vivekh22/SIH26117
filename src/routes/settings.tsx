@@ -38,7 +38,11 @@ function SettingsPage() {
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <Panel>
           <PanelHeader title="Inference" />
-          <Row label="Default model" hint="Used when the router is inconclusive" control="Qwen3-8B" />
+          <Row
+            label="Default model"
+            hint="Used when the router is inconclusive"
+            control="Qwen3-8B"
+          />
           <Row label="Max context" hint="Tokens per request" control="32K" />
           <Row label="Quantization" hint="Balance of VRAM and quality" control="Q5_K_M" />
         </Panel>

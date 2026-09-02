@@ -1,11 +1,5 @@
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useMemo,
-  useState,
-  type ReactNode,
-} from "react";
+/* eslint-disable react-refresh/only-export-components */
+import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from "react";
 import {
   agentsSeed,
   auditSeed,
@@ -86,9 +80,7 @@ export function AppStoreProvider({ children }: { children: ReactNode }) {
         setTimeout(
           () => {
             setDocuments((prev) =>
-              prev.map((d) =>
-                d.id === id ? { ...d, status, indexed: status === "indexed" } : d,
-              ),
+              prev.map((d) => (d.id === id ? { ...d, status, indexed: status === "indexed" } : d)),
             );
             if (status === "indexed") {
               addAuditLog({

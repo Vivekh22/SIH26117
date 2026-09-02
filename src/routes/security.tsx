@@ -18,8 +18,7 @@ export const Route = createFileRoute("/security")({
       { title: "Security — teamMESSIER-87 AI Workbench" },
       {
         name: "description",
-        content:
-          "Air-gap posture, egress enforcement and the on-premise architecture boundary.",
+        content: "Air-gap posture, egress enforcement and the on-premise architecture boundary.",
       },
       { property: "og:title", content: "System Security" },
       {
@@ -120,9 +119,7 @@ function SecurityPage() {
         ].map((c) => (
           <Panel key={c.title} className="px-4 py-4">
             <div className="text-sm font-semibold">{c.title}</div>
-            <p className="mt-1.5 text-[12px] leading-relaxed text-muted-foreground">
-              {c.body}
-            </p>
+            <p className="mt-1.5 text-[12px] leading-relaxed text-muted-foreground">{c.body}</p>
           </Panel>
         ))}
       </div>

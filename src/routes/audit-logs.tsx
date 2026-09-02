@@ -159,9 +159,7 @@ function AuditPage() {
                                   {t.ms} ms
                                 </span>
                               </div>
-                              <div className="text-[11px] text-muted-foreground">
-                                {t.detail}
-                              </div>
+                              <div className="text-[11px] text-muted-foreground">{t.detail}</div>
                             </div>
                           </div>
                         ))}

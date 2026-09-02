@@ -20,8 +20,7 @@ export const Route = createFileRoute("/agents")({
       { title: "Agents — teamMESSIER-87 AI Workbench" },
       {
         name: "description",
-        content:
-          "Local agent workflows: understand, plan, retrieve, execute, verify and deliver.",
+        content: "Local agent workflows: understand, plan, retrieve, execute, verify and deliver.",
       },
       { property: "og:title", content: "Agent Workflows" },
       {
@@ -69,9 +68,7 @@ function AgentsPage() {
                 </span>
                 <span className="text-center text-[11px] font-semibold">{f.label}</span>
               </div>
-              {i < FLOW.length - 1 && (
-                <ArrowRight className="h-4 w-4 shrink-0 text-primary/60" />
-              )}
+              {i < FLOW.length - 1 && <ArrowRight className="h-4 w-4 shrink-0 text-primary/60" />}
             </div>
           ))}
         </div>

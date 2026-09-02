@@ -143,9 +143,7 @@ function ModelRouterPage() {
                 )}
               >
                 <span className="block font-medium">{s.task}</span>
-                <span className="mt-0.5 block text-[11px] text-muted-foreground">
-                  → {s.model}
-                </span>
+                <span className="mt-0.5 block text-[11px] text-muted-foreground">→ {s.model}</span>
               </button>
             ))}
             <p className="pt-2 text-[11px] text-muted-foreground">

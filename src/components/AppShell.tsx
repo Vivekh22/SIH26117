@@ -53,10 +53,7 @@ const NAV_SECONDARY = [
 function Sidebar() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
-  const item = (
-    entry: { url: string; label: string; icon: typeof Home },
-    active: boolean,
-  ) => (
+  const item = (entry: { url: string; label: string; icon: typeof Home }, active: boolean) => (
     <Link
       key={entry.url}
       to={entry.url as "/"}
@@ -149,8 +146,7 @@ function TopBar() {
   const { notifications } = useAppStore();
   const [dark, setDark] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
-  const current =
-    [...NAV, ...NAV_SECONDARY].find((n) => n.url === pathname)?.label ?? "Home";
+  const current = [...NAV, ...NAV_SECONDARY].find((n) => n.url === pathname)?.label ?? "Home";
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", dark);

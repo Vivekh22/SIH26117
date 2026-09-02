@@ -36,15 +36,7 @@ export const Route = createFileRoute("/workbench")({
   component: WorkbenchPage,
 });
 
-const STEPS = [
-  "Understand",
-  "Plan",
-  "Route",
-  "Retrieve",
-  "Execute",
-  "Verify",
-  "Deliver",
-] as const;
+const STEPS = ["Understand", "Plan", "Route", "Retrieve", "Execute", "Verify", "Deliver"] as const;
 
 function WorkbenchPage() {
   const { documents, uploadDocument, openPreview, addAuditLog } = useAppStore();

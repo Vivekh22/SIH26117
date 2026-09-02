@@ -4,7 +4,7 @@
  * FastAPI endpoints (e.g. fetch(`${API_BASE}/documents`)).
  */
 
-const delay = <T,>(data: T, ms = 260): Promise<T> =>
+const delay = <T>(data: T, ms = 260): Promise<T> =>
   new Promise((resolve) => setTimeout(() => resolve(data), ms));
 
 export type DocStatus = "indexed" | "processing" | "ocr" | "uploading" | "queued";

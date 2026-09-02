@@ -127,9 +127,7 @@ function KnowledgeBasePage() {
                     <span className="block text-[13px] font-medium">
                       {r.doc} · Page {r.page}
                     </span>
-                    <span className="block text-[12px] text-muted-foreground">
-                      {r.snippet}
-                    </span>
+                    <span className="block text-[12px] text-muted-foreground">{r.snippet}</span>
                   </span>
                 </button>
               ))}

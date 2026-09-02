@@ -51,8 +51,7 @@ const typeColor: Record<string, string> = {
 };
 
 function HomePage() {
-  const { documents, documentCount, agents, models, uploadDocument, openPreview } =
-    useAppStore();
+  const { documents, documentCount, agents, models, uploadDocument, openPreview } = useAppStore();
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleFiles = (files: FileList | null) => {
@@ -138,8 +137,7 @@ function HomePage() {
           <TrafficChart height={120} />
           <div className="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-border pt-3 text-[11px] text-muted-foreground">
             <span className="inline-flex items-center gap-1.5">
-              <CheckCircle2 className="h-3.5 w-3.5 text-primary" /> All outbound connections
-              blocked
+              <CheckCircle2 className="h-3.5 w-3.5 text-primary" /> All outbound connections blocked
             </span>
             <span className="inline-flex items-center gap-1.5">
               <CheckCircle2 className="h-3.5 w-3.5 text-primary" /> Air-gapped &amp; Verified
@@ -198,9 +196,7 @@ function HomePage() {
                 </span>
                 <div className="min-w-0 flex-1">
                   <div className="truncate text-[13px] font-medium">{a.name}</div>
-                  <div className="truncate text-[11px] text-muted-foreground">
-                    {a.description}
-                  </div>
+                  <div className="truncate text-[11px] text-muted-foreground">{a.description}</div>
                 </div>
                 <StatusPill tone={a.status === "active" ? "success" : "idle"}>
                   {a.status === "active" ? "Active" : "Idle"}
@@ -309,15 +305,12 @@ function HomePage() {
                 <div className="truncate text-[13px] font-medium">
                   Approval_Note_PSV_Testing.docx
                 </div>
-                <div className="text-[11px] text-muted-foreground">
-                  Generated 2m ago · 56 KB
-                </div>
+                <div className="text-[11px] text-muted-foreground">Generated 2m ago · 56 KB</div>
               </div>
             </div>
             <p className="text-[11px] leading-relaxed text-muted-foreground">
-              This is to certify that PSV testing has been carried out as per MRPL standard
-              P-204. All parameters are within the acceptable range and the valve is fit for
-              operation…
+              This is to certify that PSV testing has been carried out as per MRPL standard P-204.
+              All parameters are within the acceptable range and the valve is fit for operation…
             </p>
             <button className="inline-flex items-center gap-2 rounded-md bg-primary px-3 py-2 text-xs font-semibold text-primary-foreground hover:bg-primary/90">
               <Download className="h-3.5 w-3.5" /> Download
